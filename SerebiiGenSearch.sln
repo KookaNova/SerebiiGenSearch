@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerebiiGenSearch", "SerebiiGenSearch.csproj", "{0A9CC5B9-84E9-4E8E-89F5-C46C2803DC51}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A9CC5B9-84E9-4E8E-89F5-C46C2803DC51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A9CC5B9-84E9-4E8E-89F5-C46C2803DC51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A9CC5B9-84E9-4E8E-89F5-C46C2803DC51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A9CC5B9-84E9-4E8E-89F5-C46C2803DC51}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C439A186-829E-4C1F-B4F0-2462004110B9}
+	EndGlobalSection
+EndGlobal
