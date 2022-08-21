@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Xamarin.Forms;
 using System.Diagnostics;
-using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Essentials;
 
 namespace SerebiiGenSearchMobile
 {
@@ -16,15 +16,15 @@ namespace SerebiiGenSearchMobile
         {
             InitializeComponent();
             CreateDictionary();
-        }
 
+
+        }
         public void CreateDictionary()
         {
-            
             ParseFileIntoDictionary.CreateDictionaryFromFile(PokeDex, "pokemon.txt", l_debug);
         }
 
-        private void Entry_Completed(object sender, EventArgs e)
+        private void SearchDex()
         {
             string value = "";
 
@@ -43,25 +43,65 @@ namespace SerebiiGenSearchMobile
                 l_debug.Text = e_input.Text + " not found in dictionary.";
             }
         }
-        private void OpenSite(string url)
+        private async void OpenSite(string url)
         {
-            //var uri = Android.Net.Uri.Parse("http://www.xamarin.com");
-           // var intent = new Intent(Intent.ActionView, uri);
-            
+
+            Uri uri = new Uri(url);
             try
             {
-                //StartActivity(intent);
-                //Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
+                await Browser.OpenAsync(uri);
             }
             catch (Exception other)
             {
                 l_debug.Text = "Browser failed to open. Message: " + other.Message;
             }
         }
+        private void e_input_Unfocused(object sender, FocusEventArgs e)
+        {
+            SearchDex();
+        }
+        
 
         private void b_rb_Clicked(object sender, EventArgs e)
         {
-            OpenSite(url + "pokedex" + "/" + pokenum);
+            OpenSite(url + "pokedex" + "/" + pokenum + ".shtml");
         }
+
+        private void b_gs_Clicked(object sender, EventArgs e)
+        {
+            OpenSite(url + "pokedex" + "-gs" + "/" + pokenum + ".shtml");
+        }
+
+        private void b_rs_Clicked(object sender, EventArgs e)
+        {
+            OpenSite(url + "pokedex" + "-rs" + "/" + pokenum + ".shtml");
+        }
+
+        private void b_dp_Clicked(object sender, EventArgs e)
+        {
+            OpenSite(url + "pokedex" + "-dp" + "/" + pokenum + ".shtml");
+        }
+
+        private void b_bw_Clicked(object sender, EventArgs e)
+        {
+            OpenSite(url + "pokedex" + "-bw" + "/" + pokenum + ".shtml");
+        }
+
+        private void b_xy_Clicked(object sender, EventArgs e)
+        {
+            OpenSite(url + "pokedex" + "-xy" + "/" + pokenum + ".shtml");
+        }
+
+        private void b_sm_Clicked(object sender, EventArgs e)
+        {
+            OpenSite(url + "pokedex" + "-sm" + "/" + pokenum + ".shtml");
+        }
+
+        private void b_swsh_Clicked(object sender, EventArgs e)
+        {
+            OpenSite(url + "pokedex" + "-swsh" + "/" + pokenum + ".shtml");
+        }
+
+        
     }
 }

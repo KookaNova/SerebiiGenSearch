@@ -11,7 +11,6 @@ namespace SerebiiGenSearchMobile
     {
         public async static void CreateDictionaryFromFile(Dictionary<string, string> dictionary, string path, Label debugLabel)
         {
-
             var file = await FileSystem.OpenAppPackageFileAsync(path);
             if(file == null)
             {

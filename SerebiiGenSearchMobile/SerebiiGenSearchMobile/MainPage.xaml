@@ -1,11 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SerebiiGenSearchMobile.MainPage">
+             x:Class="SerebiiGenSearchMobile.MainPage"
+             BackgroundColor="{StaticResource AppBackgroundColor}">
 
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Serebii Search" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+
+<StackLayout>
+        <Frame Padding="24" CornerRadius="0">
+            <Label Text="Serebii Search" HorizontalTextAlignment="Center" FontSize="36"/>
         </Frame>
         <Grid Margin="15">
             <Grid.RowDefinitions>
@@ -13,7 +15,7 @@
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
-            <Entry x:Name="e_input" Grid.Row="0" Text="Pikachu" HorizontalTextAlignment="Center" Completed="Entry_Completed" />
+            <Entry x:Name="e_input" Grid.Row="0" Text="Pikachu" HorizontalTextAlignment="Center" Unfocused="e_input_Unfocused"/>
 
             <Grid Grid.Row="2">
                 <Grid.RowDefinitions>
@@ -26,15 +28,15 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Button x:Name="b_rb" Grid.Row="0" Grid.Column="0" Text="rb" Clicked="b_rb_Clicked" />
-                <Button x:Name="b_gs" Grid.Row="0" Grid.Column="1" Text="gs" />
-                <Button x:Name="b_rs" Grid.Row="0" Grid.Column="2" Text="rs/lgfr" />
-                <Button x:Name="b_dp" Grid.Row="1" Grid.Column="0" Text="dp/hgss" />
-                <Button x:Name="b_bw" Grid.Row="1" Grid.Column="1" Text="bw" />
-                <Button x:Name="b_xy" Grid.Row="1" Grid.Column="2" Text="xy/oras" />
-                <Button x:Name="b_sm" Grid.Row="2" Grid.Column="0" Text="sm" />
-                <Button x:Name="b_swsh" Grid.Row="2" Grid.Column="1" Text="swsh/bdsp" />
-                <Button x:Name="b_sv" Grid.Row="2" Grid.Column="2" Text="sv" />
+                <Button x:Name="b_rb"   Grid.Row="0" Grid.Column="0" Text="rb"          Clicked="b_rb_Clicked" />
+                <Button x:Name="b_gs"   Grid.Row="0" Grid.Column="1" Text="gs"          Clicked="b_gs_Clicked" />
+                <Button x:Name="b_rs"   Grid.Row="0" Grid.Column="2" Text="rs/lgfr"     Clicked="b_rs_Clicked" />
+                <Button x:Name="b_dp"   Grid.Row="1" Grid.Column="0" Text="dp/hgss"     Clicked="b_dp_Clicked" />
+                <Button x:Name="b_bw"   Grid.Row="1" Grid.Column="1" Text="bw"          Clicked="b_bw_Clicked" />
+                <Button x:Name="b_xy"   Grid.Row="1" Grid.Column="2" Text="xy/oras"     Clicked="b_xy_Clicked" />
+                <Button x:Name="b_sm"   Grid.Row="2" Grid.Column="0" Text="sm"          Clicked="b_sm_Clicked" />
+                <Button x:Name="b_swsh" Grid.Row="2" Grid.Column="1" Text="swsh/bdsp"   Clicked="b_swsh_Clicked" />
+                <Button x:Name="b_sv"   Grid.Row="2" Grid.Column="2" Text="sv" />
             </Grid>
         </Grid>
         <Label x:Name="l_debug" Margin="15" Text="..."/>

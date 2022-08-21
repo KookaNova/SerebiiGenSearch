@@ -10,6 +10,7 @@ namespace SerebiiGenSearchMobile
         {
             InitializeComponent();
 
+
             MainPage = new MainPage();
         }
 

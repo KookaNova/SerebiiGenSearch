@@ -123,13 +123,16 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="NETStandard.Library">
+      <Version>2.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2515" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\SerebiiGenSearchMobile\SerebiiGenSearchMobile.csproj">
-      <Project>{A0FD74F8-3C38-4FEB-907C-912880802713}</Project>
+      <Project>{392D1921-4BBB-4D8E-9D5E-E28043A560BD}</Project>
       <Name>SerebiiGenSearchMobile</Name>
     </ProjectReference>
   </ItemGroup>
