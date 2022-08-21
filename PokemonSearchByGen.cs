@@ -14,7 +14,7 @@ namespace SerebiiGenSearch
         public PokemonSearchByGen()
         {
             InitializeComponent();
-            ParseFileIntoDictionary.CreateDictionaryFromFile(PokeDex, "../../../pokemon.txt", l_debug);
+            ParseFileIntoDictionary.CreateDictionaryFromFile(PokeDex, "pokemon.txt", l_debug);
 
         }
 

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SerebiiGenSearchMobile.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Serebii Search" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Grid Margin="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Entry x:Name="e_input" Grid.Row="0" Text="Pikachu" HorizontalTextAlignment="Center" Completed="Entry_Completed" />
+
+            <Grid Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="125" />
+                    <RowDefinition Height="125" />
+                    <RowDefinition Height="125" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="b_rb" Grid.Row="0" Grid.Column="0" Text="rb" Clicked="b_rb_Clicked" />
+                <Button x:Name="b_gs" Grid.Row="0" Grid.Column="1" Text="gs" />
+                <Button x:Name="b_rs" Grid.Row="0" Grid.Column="2" Text="rs/lgfr" />
+                <Button x:Name="b_dp" Grid.Row="1" Grid.Column="0" Text="dp/hgss" />
+                <Button x:Name="b_bw" Grid.Row="1" Grid.Column="1" Text="bw" />
+                <Button x:Name="b_xy" Grid.Row="1" Grid.Column="2" Text="xy/oras" />
+                <Button x:Name="b_sm" Grid.Row="2" Grid.Column="0" Text="sm" />
+                <Button x:Name="b_swsh" Grid.Row="2" Grid.Column="1" Text="swsh/bdsp" />
+                <Button x:Name="b_sv" Grid.Row="2" Grid.Column="2" Text="sv" />
+            </Grid>
+        </Grid>
+        <Label x:Name="l_debug" Margin="15" Text="..."/>
+    </StackLayout>
+</ContentPage>
