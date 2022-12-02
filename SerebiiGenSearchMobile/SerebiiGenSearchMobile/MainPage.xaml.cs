@@ -102,6 +102,8 @@ namespace SerebiiGenSearchMobile
             OpenSite(url + "pokedex" + "-swsh" + "/" + pokenum + ".shtml");
         }
 
-        
+        private void b_sv_Clicked(object sender, EventArgs e) {
+            OpenSite(url + "pokedex" + "-sv" + "/" + pokenum + ".shtml");
+        }
     }
 }

@@ -36,7 +36,7 @@
                 <Button x:Name="b_xy"   Grid.Row="1" Grid.Column="2" Text="xy/oras"     Clicked="b_xy_Clicked" />
                 <Button x:Name="b_sm"   Grid.Row="2" Grid.Column="0" Text="sm"          Clicked="b_sm_Clicked" />
                 <Button x:Name="b_swsh" Grid.Row="2" Grid.Column="1" Text="swsh/bdsp"   Clicked="b_swsh_Clicked" />
-                <Button x:Name="b_sv"   Grid.Row="2" Grid.Column="2" Text="sv" />
+                <Button x:Name="b_sv"   Grid.Row="2" Grid.Column="2" Text="sv"          Clicked="b_sv_Clicked"/>
             </Grid>
         </Grid>
         <Label x:Name="l_debug" Margin="15" Text="..."/>
