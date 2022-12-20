@@ -8,6 +8,7 @@ namespace SerebiiGenSearch
         string baseUrl = "https://www.serebii.net/pokedex";
         string pokemon = "025";
         string suffix = ".shtml";
+        string message = "Searching for pokemon #025";
 
         public Dictionary<string, string> PokeDex = new();
 
@@ -79,29 +80,32 @@ namespace SerebiiGenSearch
             OpenSite(baseUrl + "-swsh" + "/" + pokemon + suffix);
         }
 
+        private void b_gen_9_Click(object sender, EventArgs e) {
+            OpenSite(baseUrl + "-sv" + "/" + pokemon + suffix);
+        }
+
         private void t_name_input_TextChanged(object sender, EventArgs e)
         {
             string? value = "";
 
             PokeDex.TryGetValue(t_name_input.Text.ToLower(), out value);
             
-            if (value != null) { 
+            if (value != null) {
                 pokemon = value;
-                Debug.WriteLine("Searching for pokemon #" + value);
-                l_debug.Text = "Searching for pokemon #" + value;
+                if (pokemon[0] == '0') {
+                    pokemon = pokemon.Remove(0, 1);
+                }
+                message = "Searching for pokemon #" + pokemon;
+                Debug.WriteLine(message);
+                l_debug.Text = message;
             }
             else
             {
                 pokemon = "025";
-                Debug.WriteLine(t_name_input.Text + " not found in dictionary.");
-                l_debug.Text = t_name_input.Text + " not found in dictionary.";
+                message = t_name_input.Text + " not found in dictionary.";
+                Debug.WriteLine(message);
+                l_debug.Text = message;
             }
-
-
-
-
-
-
         }
     }
 }

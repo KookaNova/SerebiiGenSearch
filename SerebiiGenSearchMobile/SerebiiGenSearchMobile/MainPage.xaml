@@ -28,17 +28,17 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Button x:Name="b_rb"   Grid.Row="0" Grid.Column="0" Text="rb"          Clicked="b_rb_Clicked" />
-                <Button x:Name="b_gs"   Grid.Row="0" Grid.Column="1" Text="gs"          Clicked="b_gs_Clicked" />
-                <Button x:Name="b_rs"   Grid.Row="0" Grid.Column="2" Text="rs/lgfr"     Clicked="b_rs_Clicked" />
-                <Button x:Name="b_dp"   Grid.Row="1" Grid.Column="0" Text="dp/hgss"     Clicked="b_dp_Clicked" />
-                <Button x:Name="b_bw"   Grid.Row="1" Grid.Column="1" Text="bw"          Clicked="b_bw_Clicked" />
-                <Button x:Name="b_xy"   Grid.Row="1" Grid.Column="2" Text="xy/oras"     Clicked="b_xy_Clicked" />
-                <Button x:Name="b_sm"   Grid.Row="2" Grid.Column="0" Text="sm"          Clicked="b_sm_Clicked" />
-                <Button x:Name="b_swsh" Grid.Row="2" Grid.Column="1" Text="swsh/bdsp"   Clicked="b_swsh_Clicked" />
-                <Button x:Name="b_sv"   Grid.Row="2" Grid.Column="2" Text="sv"          Clicked="b_sv_Clicked"/>
+                <Button x:Name="b_rb"   Grid.Row="0" Grid.Column="0" Text="Red/Blue"        Clicked="b_rb_Clicked" />
+                <Button x:Name="b_gs"   Grid.Row="0" Grid.Column="1" Text="gold/silver"     Clicked="b_gs_Clicked" />
+                <Button x:Name="b_rs"   Grid.Row="0" Grid.Column="2" Text="ruby/sapphire"   Clicked="b_rs_Clicked" />
+                <Button x:Name="b_dp"   Grid.Row="1" Grid.Column="0" Text="diamond/pearl"   Clicked="b_dp_Clicked" />
+                <Button x:Name="b_bw"   Grid.Row="1" Grid.Column="1" Text="black/white"     Clicked="b_bw_Clicked" />
+                <Button x:Name="b_xy"   Grid.Row="1" Grid.Column="2" Text="x/y"             Clicked="b_xy_Clicked" />
+                <Button x:Name="b_sm"   Grid.Row="2" Grid.Column="0" Text="sun/moon"        Clicked="b_sm_Clicked" />
+                <Button x:Name="b_swsh" Grid.Row="2" Grid.Column="1" Text="sword/shield"    Clicked="b_swsh_Clicked" />
+                <Button x:Name="b_sv"   Grid.Row="2" Grid.Column="2" Text="scarlet/violet"  Clicked="b_sv_Clicked"/>
             </Grid>
         </Grid>
-        <Label x:Name="l_debug" Margin="15" Text="..."/>
+        <Label x:Name="l_debug" Margin="15" Text="Searching for pokemon #025"/>
     </StackLayout>
 </ContentPage>

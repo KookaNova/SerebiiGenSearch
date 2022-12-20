@@ -11,6 +11,7 @@ namespace SerebiiGenSearchMobile
         Dictionary<string, string> PokeDex = new Dictionary<string, string>();
         string url = "https://www.serebii.net/";
         string pokenum = "025";
+        string message = "Searching for pokemon #025";
 
         public MainPage()
         {
@@ -23,7 +24,6 @@ namespace SerebiiGenSearchMobile
         {
             ParseFileIntoDictionary.CreateDictionaryFromFile(PokeDex, "pokemon.txt", l_debug);
         }
-
         private void SearchDex()
         {
             string value = "";
@@ -33,19 +33,23 @@ namespace SerebiiGenSearchMobile
             if (value != null)
             {
                 pokenum = value;
-                Debug.WriteLine("Searching for pokemon #" + value);
-                l_debug.Text = "Searching for pokemon #" + value;
+                if (pokenum[0] == '0') {
+                    pokenum = pokenum.Remove(0,1);
+                }
+                message = "Searching for pokemon #" + pokenum;
+                Debug.WriteLine(message);
+                l_debug.Text = message;
             }
             else
             {
                 pokenum = "025";
-                Debug.WriteLine(e_input.Text + " not found in dictionary.");
-                l_debug.Text = e_input.Text + " not found in dictionary.";
+                message = e_input.Text + " not found in dictionary.";
+                Debug.WriteLine(message);
+                l_debug.Text = message;
             }
         }
         private async void OpenSite(string url)
         {
-
             Uri uri = new Uri(url);
             try
             {
